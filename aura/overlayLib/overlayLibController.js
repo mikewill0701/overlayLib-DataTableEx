@@ -1,10 +1,10 @@
 ({
 	openModal: function(component, event, helper) {
 		$A.createComponent(
-            'c:modalContent',
+            'c:modalContent', // content component
 
             {
-                'message': 'Hey there, modal!'
+                'message': 'Hey there, modal!' // attribute passed to modal content component
             },
 
             function(content, status) {

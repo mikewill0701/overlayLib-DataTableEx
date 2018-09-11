@@ -1,6 +1,7 @@
 <aura:component >
     <aura:attribute name="message" type="string"/>
-    
+
+    <!-- Display attribute passed from overlayLib component -->
     <div>
         {!v.message}
     </div>
