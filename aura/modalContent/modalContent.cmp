@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="message" type="string"/>
+    
+    <div>
+        {!v.message}
+    </div>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+
+    <lightning:button label="Click me" onclick="{!c.openModal}"/>
+</aura:component>

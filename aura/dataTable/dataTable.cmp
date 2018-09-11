@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:attribute name="fullData" type="List"/>
+    <aura:attribute name="data" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedDirection" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <lightning:input class="slds-align--absolute-center slds-m-bottom--medium"
+                     variant="label-hidden" placeholder="Enter Filter for Column A" onchange="{!c.filter}"/>
+
+    <lightning:datatable
+         keyField="id"
+         data="{!v.data}"
+         columns="{!v.columns}"
+         hideCheckboxColumn="true"
+         showRowNumberColumn="true"
+         onsort="{!c.sortData}"
+         sortedBy="{!v.sortedBy}"
+         sortedDirection="{!v.sortedDirection}"
+     />
+
+</aura:component>
